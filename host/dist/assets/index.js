@@ -6,7 +6,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             __vitePreload = module.__vitePreload;
             importShared = module.importShared;
         }],
-        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\n._green_ti6as_2 {\n  color: green;\n}\n._bold_ti6as_5 {\n  font-weight: bold;\n}\n\n._button_1s3ds_2 {\n    background-color: #4CAF50; /* Green */\n    border: none;\n    color: white;\n    padding: 15px 32px;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 16px;\n}\n\nimg[data-v-d341dbf3] {\n  width: 200px;\n}\n.h1[data-v-d341dbf3] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-d341dbf3] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
+        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\nimg[data-v-9c9fa4c6] {\n  width: 200px;\n}\n.h1[data-v-9c9fa4c6] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-9c9fa4c6] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
 
             false&&(function polyfill() {
                 const relList = document.createElement('link').relList;
@@ -148,27 +148,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
                                 return __federation_method_ensure(remoteName).then((remote) => remote.get(componentName).then(factory => factory()));
                             }
 
-            const {defineStore} = await importShared('pinia');
-
-
-            const useStore = defineStore('main', {
-                state: () => ({
-                    counter: 5
-                }),
-
-                actions: {
-                    increase() {
-                        this.counter++;
-                    }
-                }
-            });
-
-            const green = "_green_ti6as_2";
-            const bold = "_bold_ti6as_5";
-            const style0$1 = {
-            	green: green,
-            	bold: bold
-            };
+            const Layout_vue_vue_type_style_index_0_scoped_9c9fa4c6_lang = '';
 
             const _export_sfc = (sfc, props) => {
               const target = sfc.__vccOpts || sfc;
@@ -178,130 +158,42 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
               return target;
             };
 
-            const _sfc_main$2 = {
-              data() {
-                return {
-                  title: 'Layout Component in Action..'
-                }
-              },
-              computed:{
-                cartCount() {
-                  const store = useStore();
-                  return store.counter
-                }
-              }
-            };
+            const {defineAsyncComponent: defineAsyncComponent$1} = await importShared('vue');
 
-            const {toDisplayString:_toDisplayString$1,normalizeClass:_normalizeClass$1,createElementVNode:_createElementVNode$1,Fragment:_Fragment,openBlock:_openBlock$2,createElementBlock:_createElementBlock$1} = await importShared('vue');
-
-
-            function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
-              return (_openBlock$2(), _createElementBlock$1(_Fragment, null, [
-                _createElementVNode$1("div", {
-                  class: _normalizeClass$1(_ctx.$style.green)
-                }, _toDisplayString$1($data.title), 3),
-                _createElementVNode$1("p", {
-                  id: "cart-item-layout",
-                  class: _normalizeClass$1(_ctx.$style.green)
-                }, "cartItems from pinia: " + _toDisplayString$1($options.cartCount), 3),
-                _createElementVNode$1("div", {
-                  class: _normalizeClass$1([_ctx.$style.green, _ctx.$style.bold])
-                }, "green and bold", 2)
-              ], 64))
-            }
-            const cssModules$1 = {
-            "$style":style0$1,
-            };
-            const Content = /*#__PURE__*/_export_sfc(_sfc_main$2, [['render',_sfc_render$2],['__cssModules',cssModules$1]]);
-
-            const {h} = await importShared('vue');
-
-            const button$1 = {
-                name: "btn-component",
-                render() {
-                    return h(
-                        "button",
-                        {
-                            id: "btn-layout",
-                            style: {
-                                'background-color': '#4CAF50',
-                                'border': 'none',
-                                'color': 'white',
-                                'padding': '15px 32px',
-                                'text-align': 'center',
-                                'text-decoration': 'none',
-                                'display': 'inline-block',
-                                'font-size': '16px'
-                            },
-                            onClick: () => {
-                                const store = useStore();
-                                store.increase();
-                            }
-                        },
-                        "Hello Layout Button"
-                    );
-                },
-            };
-
-            const button = "_button_1s3ds_2";
-            const style0 = {
-            	button: button
-            };
-
-            const _sfc_main$1 = {
-              data: function () {
-                return {
-                  title: 'I will not be used'
-                }
-              }
-            };
-
-            const {toDisplayString:_toDisplayString,createElementVNode:_createElementVNode,normalizeClass:_normalizeClass,openBlock:_openBlock$1,createElementBlock:_createElementBlock} = await importShared('vue');
-
-
-            const _hoisted_1 = { id: "home-unusedbutton" };
-
-            function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-              return (_openBlock$1(), _createElementBlock("div", _hoisted_1, [
-                _createElementVNode("h1", null, _toDisplayString(_ctx.title), 1),
-                _createElementVNode("button", {
-                  class: _normalizeClass(_ctx.$style.button),
-                  onClick: _cache[0] || (_cache[0] = $event => (_ctx.title = _ctx.title + '!'))
-                }, "Unused Layout Button", 2)
-              ]))
-            }
-            const cssModules = {
-            "$style":style0,
-            };
-            const UnusedButton = /*#__PURE__*/_export_sfc(_sfc_main$1, [['render',_sfc_render$1],['__cssModules',cssModules]]);
-
-            const Layout_vue_vue_type_style_index_0_scoped_d341dbf3_lang = '';
-
+            // import Content from "./components/Content.vue";
+            // import Button from "./components/Button.js";
+            // import UnusedButton from "./components/UnusedButton.vue";
+            const CssModuleButton = defineAsyncComponent$1(() => __federation_method_getRemote("css-modules" , "./Button").then(module=>__federation_method_wrapDefault(module, true)));
+            // app.component("css-modules-button", CssModuleButton);
             const _sfc_main = {  components: {
-                Content,
-                Button: button$1,
-                UnusedButton,
+                // Content,
+                // Button,
+                // UnusedButton,
+                'css-modules-button': CssModuleButton
               },};
 
-            const {resolveComponent:_resolveComponent,openBlock:_openBlock,createBlock:_createBlock} = await importShared('vue');
+            const {resolveComponent:_resolveComponent,createVNode:_createVNode,createTextVNode:_createTextVNode,openBlock:_openBlock,createElementBlock:_createElementBlock} = await importShared('vue');
 
 
             function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
               const _component_css_modules_button = _resolveComponent("css-modules-button");
 
-              return (_openBlock(), _createBlock(_component_css_modules_button))
+              return (_openBlock(), _createElementBlock("div", null, [
+                _cache[0] || (_cache[0] = _createTextVNode(" 改变了 ")),
+                _createVNode(_component_css_modules_button)
+              ]))
             }
-            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-d341dbf3"]]);
+            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-9c9fa4c6"]]);
 
             const {createApp,defineAsyncComponent} = await importShared('vue');
 
             const {createPinia} = await importShared('pinia');
-            const CssModuleButton = defineAsyncComponent(() => __federation_method_getRemote("css-modules" , "./Button").then(module=>__federation_method_wrapDefault(module, true)));
+
 
 
             const app = createApp(Layout);
 
-            app.component("css-modules-button", CssModuleButton);
+
 
             app.use(createPinia());
             app.mount("#root");
