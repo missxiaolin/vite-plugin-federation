@@ -53,7 +53,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             }());
 
             const remotesMap = {
-            'css-modules':{url:()=>fetch('http://localhost:5003/assets/remoteEntry.js').then(response=>response.json()).then(data=>data.url),format:'esm',from:'vite'}
+            'css-modules':{url:'http://vite-demo.com/assets/remoteEntry.js',format:'esm',from:'vite'}
             };
                             const currentImports = {};
                             const loadJS = async (url, fn) => {

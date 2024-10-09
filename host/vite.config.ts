@@ -16,6 +16,7 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       remotes: {
         'css-modules': 'http://localhost:5003/assets/remoteEntry.js'
+        // 'css-modules': 'http://vite-demo.com/assets/remoteEntry.js'
       },
       shared: ['vue', 'pinia']
     })
