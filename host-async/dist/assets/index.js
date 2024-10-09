@@ -6,7 +6,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             __vitePreload = module.__vitePreload;
             importShared = module.importShared;
         }],
-        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\nimg[data-v-090c5d62] {\n  width: 200px;\n}\n.h1[data-v-090c5d62] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-090c5d62] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
+        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\nimg[data-v-229aed9a] {\n  width: 200px;\n}\n.h1[data-v-229aed9a] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-229aed9a] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
 
             false&&(function polyfill() {
                 const relList = document.createElement('link').relList;
@@ -53,7 +53,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             }());
 
             const remotesMap = {
-            'css-modules':{url:'http://vite-demo.com/assets/remoteEntry.js',format:'esm',from:'vite'}
+            'css-modules':{url:'http://localhost:5003/assets/remoteEntry.js',format:'esm',from:'vite'}
             };
                             const currentImports = {};
                             const loadJS = async (url, fn) => {
@@ -134,21 +134,19 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
                                 }
                             }
 
-                            function __federation_method_wrapDefault(module, need) {
-                                if (!module?.default && need) {
-                                    let obj = Object.create(null);
-                                    obj.default = module;
-                                    obj.__esModule = true;
-                                    return obj;
-                                }
-                                return module;
+                            function __federation_method_unwrapDefault(module) {
+                                return (module?.__esModule || module?.[Symbol.toStringTag] === 'Module') ? module.default : module
                             }
 
                             function __federation_method_getRemote(remoteName, componentName) {
                                 return __federation_method_ensure(remoteName).then((remote) => remote.get(componentName).then(factory => factory()));
                             }
 
-            const Layout_vue_vue_type_style_index_0_scoped_090c5d62_lang = '';
+                            function __federation_method_setRemote(remoteName, remoteConfig) {
+                              remotesMap[remoteName] = remoteConfig;
+                            }
+
+            const Layout_vue_vue_type_style_index_0_scoped_229aed9a_lang = '';
 
             const _export_sfc = (sfc, props) => {
               const target = sfc.__vccOpts || sfc;
@@ -158,31 +156,47 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
               return target;
             };
 
-            const {defineAsyncComponent: defineAsyncComponent$1} = await importShared('vue');
-
+            const {defineAsyncComponent: defineAsyncComponent$1,render,h,onMounted,ref} = await importShared('vue');
             // import Content from "./components/Content.vue";
             // import Button from "./components/Button.js";
             // import UnusedButton from "./components/UnusedButton.vue";
-            const CssModuleButton = defineAsyncComponent$1(() => __federation_method_getRemote("css-modules" , "./Button").then(module=>__federation_method_wrapDefault(module, true)));
+            // const CssModuleButton = defineAsyncComponent(() =>
+            //   import("css-modules/Button")
+            // );
             // app.component("css-modules-button", CssModuleButton);
-            const _sfc_main = {  components: {
+            const _sfc_main = {
+              components: {
                 // Content,
                 // Button,
                 // UnusedButton,
-                'css-modules-button': CssModuleButton
-              },};
+                // "css-modules-button": CssModuleButton,
+              },
+              mounted() {
+                __federation_method_setRemote("dynamic", {
+                  url: () => Promise.resolve("http://localhost:5003/assets/remoteEntry.js"),
+                  format: "esm",
+                  from: "vite",
+                });
+                __federation_method_getRemote("dynamic", "./Button")
+                  .then((moduleWraped) => __federation_method_unwrapDefault(moduleWraped))
+                  .then((module) => {
+                    console.log(module);
+                    render(h(module, {}), this.$refs.container);
+                  });
+              },
+            };
 
-            const {resolveComponent:_resolveComponent,createVNode:_createVNode,openBlock:_openBlock,createElementBlock:_createElementBlock} = await importShared('vue');
+            const {createElementVNode:_createElementVNode,openBlock:_openBlock,createElementBlock:_createElementBlock} = await importShared('vue');
 
+
+            const _hoisted_1 = { ref: "container" };
 
             function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-              const _component_css_modules_button = _resolveComponent("css-modules-button");
-
               return (_openBlock(), _createElementBlock("div", null, [
-                _createVNode(_component_css_modules_button)
+                _createElementVNode("div", _hoisted_1, null, 512)
               ]))
             }
-            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-090c5d62"]]);
+            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-229aed9a"]]);
 
             const {createApp,defineAsyncComponent} = await importShared('vue');
 
