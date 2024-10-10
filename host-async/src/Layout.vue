@@ -19,6 +19,9 @@ import {
 // );
 // app.component("css-modules-button", CssModuleButton);
 export default {
+  data() {
+
+  },
   components: {
     // Content,
     // Button,
