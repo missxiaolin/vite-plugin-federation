@@ -6,7 +6,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             __vitePreload = module.__vitePreload;
             importShared = module.importShared;
         }],
-        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\nimg[data-v-229aed9a] {\n  width: 200px;\n}\n.h1[data-v-229aed9a] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-229aed9a] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
+        execute: (async function () {var __vite_style__ = document.createElement('style');__vite_style__.textContent = "\nimg[data-v-2b0b8f86] {\n  width: 200px;\n}\n.h1[data-v-2b0b8f86] {\n  border: 5px solid red !important;\n  padding: 1px !important;\n}\n.section[data-v-2b0b8f86] {\n  border: 1px solid black;\n  padding: 10px;\n}\n";document.head.appendChild(__vite_style__);
 
             false&&(function polyfill() {
                 const relList = document.createElement('link').relList;
@@ -146,7 +146,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
                               remotesMap[remoteName] = remoteConfig;
                             }
 
-            const Layout_vue_vue_type_style_index_0_scoped_229aed9a_lang = '';
+            const Layout_vue_vue_type_style_index_0_scoped_2b0b8f86_lang = '';
 
             const _export_sfc = (sfc, props) => {
               const target = sfc.__vccOpts || sfc;
@@ -165,6 +165,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             // );
             // app.component("css-modules-button", CssModuleButton);
             const _sfc_main = {
+              data() {},
               components: {
                 // Content,
                 // Button,
@@ -172,8 +173,16 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
                 // "css-modules-button": CssModuleButton,
               },
               mounted() {
+                // __federation_method_setRemote("dynamic", {
+                //   url: () => Promise.resolve("http://localhost:5003/assets/remoteEntry.js"),
+                //   format: "esm",
+                //   from: "vite",
+                // });
                 __federation_method_setRemote("dynamic", {
-                  url: () => Promise.resolve("http://localhost:5003/assets/remoteEntry.js"),
+                  url: () =>
+                    Promise.resolve(
+                      "http://www.missxiaolin.com/lowcode/1.0.0/assets/remoteEntry.js"
+                    ),
                   format: "esm",
                   from: "vite",
                 });
@@ -196,7 +205,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
                 _createElementVNode("div", _hoisted_1, null, 512)
               ]))
             }
-            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-229aed9a"]]);
+            const Layout = /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',"data-v-2b0b8f86"]]);
 
             const {createApp,defineAsyncComponent} = await importShared('vue');
 

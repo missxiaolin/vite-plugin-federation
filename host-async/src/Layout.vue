@@ -19,9 +19,7 @@ import {
 // );
 // app.component("css-modules-button", CssModuleButton);
 export default {
-  data() {
-
-  },
+  data() {},
   components: {
     // Content,
     // Button,
@@ -29,8 +27,16 @@ export default {
     // "css-modules-button": CssModuleButton,
   },
   mounted() {
+    // __federation_method_setRemote("dynamic", {
+    //   url: () => Promise.resolve("http://localhost:5003/assets/remoteEntry.js"),
+    //   format: "esm",
+    //   from: "vite",
+    // });
     __federation_method_setRemote("dynamic", {
-      url: () => Promise.resolve("http://localhost:5003/assets/remoteEntry.js"),
+      url: () =>
+        Promise.resolve(
+          "http://www.missxiaolin.com/lowcode/1.0.0/assets/remoteEntry.js"
+        ),
       format: "esm",
       from: "vite",
     });
