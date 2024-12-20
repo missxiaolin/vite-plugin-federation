@@ -53,7 +53,7 @@ System.register(['./_virtual___federation_fn_import-a03e6aba.js'], (function (ex
             }());
 
             const remotesMap = {
-            'css-modules':{url:'http://localhost:5003/assets/remoteEntry.js',format:'esm',from:'vite'}
+            'css-modules':{url:'http://www.missxiaolin.com/lowcode/1.0.0/assets/remoteEntry.js',format:'esm',from:'vite'}
             };
                             const currentImports = {};
                             const loadJS = async (url, fn) => {

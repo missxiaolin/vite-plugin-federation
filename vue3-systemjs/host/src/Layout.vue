@@ -5,18 +5,22 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 // import Content from "./components/Content.vue";
 // import Button from "./components/Button.js";
 // import UnusedButton from "./components/UnusedButton.vue";
-const CssModuleButton = defineAsyncComponent(() => import("css-modules/Button"));
+const CssModuleButton = defineAsyncComponent(() =>
+  import("css-modules/Button")
+);
 // app.component("css-modules-button", CssModuleButton);
-export default {  components: {
+export default {
+  components: {
     // Content,
     // Button,
     // UnusedButton,
-    'css-modules-button': CssModuleButton
-  },};
+    "css-modules-button": CssModuleButton,
+  },
+};
 </script>
 
 <style scoped>
