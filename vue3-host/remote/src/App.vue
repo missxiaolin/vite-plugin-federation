@@ -1,11 +1,16 @@
 <template>
-  <div>1111</div>
+  <div>
+    <Button />
+  </div>
 </template>
 
 <script>
 import { ref } from "vue";
+import Button from "./components/Button.vue";
 export default {
-  components: {},
+  components: {
+    Button,
+  },
   setup() {
     const count = ref(0);
     const inc = () => {

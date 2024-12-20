@@ -1,7 +1,9 @@
 <template>
   <div id="css-modules-div">
     <h1 :class="$style.powderblue">{{ title }}ceshi</h1>
-    <button :class="$style.button" @click="title = title + '!'">Button with styleceshi</button>
+    <a-button :class="$style.button" @click="title = title + '!'"
+      >Button with styleceshi</a-button
+    >
   </div>
 </template>
 
@@ -10,24 +12,13 @@
 export default {
   data: function () {
     return {
-      title: ''
-    }
-  }
-}
+      title: "",
+    };
+  },
+};
 </script>
 <style module>
 .powderblue {
-  color: powderblue
-}
-
-.button {
-  background-color: powderblue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  color: powderblue;
 }
 </style>

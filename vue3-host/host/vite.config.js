@@ -27,7 +27,7 @@ export default defineConfig({
         //   externalType: "promise",
         // },
       },
-      shared: ["vue"],
+      shared: ["vue", "ant-desine-vue"],
     }),
   ],
   build: {

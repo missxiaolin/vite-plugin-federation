@@ -9,6 +9,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "ant-design-vue": "^4.2.6",
     "vite-plugin-top-level-await": "^1.4.4",
     "vue": "^3.2.45"
   },
