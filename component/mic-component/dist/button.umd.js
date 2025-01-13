@@ -1,0 +1,4 @@
+(function(t,e){typeof exports=="object"&&typeof module<"u"?e(require("ant-design-vue"),require("vue")):typeof define=="function"&&define.amd?define(["ant-design-vue","vue"],e):(t=typeof globalThis<"u"?globalThis:t||self,e(t.antd,t.Vue))})(this,function(t,e){"use strict";/*!
+* xiaolin Mon Jan 13 2025 19:45:44 GMT+0800 (中国标准时间)
+* (c) 2021 @Energy Monster All Right Reserved..
+*/const u=(o,n)=>{const s=o.__vccOpts||o;for(const[r,d]of n)s[r]=d;return s},c={name:"lButton",components:{Button:t.Button},setup(o){}},p={class:"powderblue"};function f(o,n,s,r,d,_){const a=e.resolveComponent("a-button");return e.openBlock(),e.createElementBlock("div",p,[n[1]||(n[1]=e.createTextVNode(" 我是插件组件 ")),e.createVNode(a,null,{default:e.withCtx(()=>n[0]||(n[0]=[e.createTextVNode("sss")])),_:1})])}const i=u(c,[["render",f]]);window.share||(window.share={}),window.share[i.name]=i});

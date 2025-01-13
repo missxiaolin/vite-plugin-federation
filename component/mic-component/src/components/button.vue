@@ -1,15 +1,16 @@
 <template>
   <div class="powderblue">
-    ceshi
-    <!-- <a-button>sss</a-button> -->
+    我是插件组件
+    <a-button>sss</a-button>
   </div>
 </template>
 
 <script>
-// import { Button } from "ant-design-vue";
+import { Button } from "ant-design-vue";
 export default {
+  name: "lButton",
   components: {
-    // Button,
+    Button,
   },
   setup(props) {},
 };

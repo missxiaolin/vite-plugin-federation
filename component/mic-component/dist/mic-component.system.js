@@ -1,1 +1,0 @@
-System.register("MyButton",["vue"],function(p,l){"use strict";var c,n;return{setters:[e=>{c=e.openBlock,n=e.createElementBlock}],execute:function(){const e=(t,s)=>{const o=t.__vccOpts||t;for(const[r,u]of s)o[r]=u;return o},_={components:{},setup(t){}},a={class:"powderblue"};function i(t,s,o,r,u,d){return c(),n("div",a," ceshi ")}const f=p("default",e(_,[["render",i]]))}}});
