@@ -1,0 +1,1 @@
+var MyButton=function(e){"use strict";const r=(t,n)=>{const o=t.__vccOpts||t;for(const[c,s]of n)o[c]=s;return o},p={components:{},setup(t){}},u={class:"powderblue"};function _(t,n,o,c,s,i){return e.openBlock(),e.createElementBlock("div",u," ceshi ")}return r(p,[["render",_]])}(Vue);
