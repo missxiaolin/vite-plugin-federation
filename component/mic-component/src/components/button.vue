@@ -1,17 +1,11 @@
 <template>
-  <div class="powderblue">
-    我是插件组件
-    <a-button>sss</a-button>
-  </div>
+  <div class="powderblue">我是插件组件</div>
 </template>
 
 <script>
-import { Button } from "ant-design-vue";
 export default {
   name: "lButton",
-  components: {
-    Button,
-  },
+  components: {},
   setup(props) {},
 };
 </script>

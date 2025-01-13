@@ -1,11 +1,12 @@
 <template>
   <div>
     <component :is="component"></component>
+    <a-button>啥啥啥</a-button>
   </div>
 </template>
 
 <script>
-import { onMounted, ref, markRaw } from "vue";
+import { onMounted, ref } from "vue";
 import { Button } from "ant-design-vue";
 
 export default {
@@ -20,25 +21,15 @@ export default {
         const script = document.createElement("script");
         script.src = `http://localhost:5010/button.umd.js`;
         script.onload = script.onreadystatechange = function () {
-          if (
-            !this.readyState ||
-            this.readyState === "loaded" ||
-            this.readyState === "complete"
-          ) {
-            resolve();
-          }
+          resolve();
         };
         document.querySelector("head").appendChild(script);
       });
 
     const addComp = async (name) => {
       await loadComponent(name);
-      if (window.share && window.share[name]) {
-        console.log(window.share[name]);
-        component.value = markRaw(window.share[name]);
-      } else {
-        console.error(`Component ${name} not found in window.share`);
-      }
+      console.log(window.share);
+      component.value = window.share[name];
     };
 
     onMounted(() => {
