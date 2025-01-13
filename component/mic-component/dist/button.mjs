@@ -1,22 +1,23 @@
-import { openBlock as c, createElementBlock as a } from "vue";
+import { openBlock as s, createElementBlock as r } from "vue";
 /*!
-* xiaolin Mon Jan 13 2025 21:33:34 GMT+0800 (中国标准时间)
+* xiaolin Mon Jan 13 2025 21:45:12 GMT+0800 (中国标准时间)
 * (c) 2021 @Energy Monster All Right Reserved..
 */
-const p = (o, e) => {
-  const t = o.__vccOpts || o;
-  for (const [n, s] of e)
-    t[n] = s;
-  return t;
+const p = (t, e) => {
+  const o = t.__vccOpts || t;
+  for (const [n, c] of e)
+    o[n] = c;
+  return o;
 }, _ = {
   name: "lButton",
   components: {},
-  setup(o) {
+  setup(t) {
   }
-}, i = { class: "powderblue" };
-function d(o, e, t, n, s, u) {
-  return c(), a("div", i, "我是插件组件");
+}, a = { class: "powderblue" };
+function u(t, e, o, n, c, l) {
+  return s(), r("div", a, "我是插件组件");
 }
-const r = /* @__PURE__ */ p(_, [["render", d]]);
-window.share || (window.share = {});
-window.share[r.name] = r;
+const f = /* @__PURE__ */ p(_, [["render", u]]);
+export {
+  f as default
+};

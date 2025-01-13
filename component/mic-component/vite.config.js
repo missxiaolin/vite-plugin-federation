@@ -52,7 +52,8 @@ export default defineConfig({
       },
     },
     lib: {
-      entry: "src/components/index.js",
+      // entry: "src/components/index.js", // umd加载方式这样使用
+      entry: "src/components/button.vue", // es加载方式这样使用
       name: "button",
       fileName: "button",
       // formats: ["umd"],
