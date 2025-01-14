@@ -6,12 +6,25 @@ import importToConst from "./vite/importToConst";
 const banner = `/*!
 * xiaolin ${new Date()}
 * (c) 2021 @Energy Monster All Right Reserved..
-*/`;
+*/\n`;
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // , importToConst()
-  plugins: [vue()],
+  resolve: {
+    alias: {
+      vue: "https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.esm-browser.js",
+    },
+  },
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag === "vue",
+        },
+      },
+    }),
+  ],
   build: {
     // outDir: "./dist",
     // lib: {
@@ -41,12 +54,12 @@ export default defineConfig({
     rollupOptions: {
       // plugins: [resolve(), commonjs()],
       // 请确保外部化那些你的库中不需要的依赖
-      external: ["vue", "vue-router", "ant-design-vue"],
+      // external: ["vue", "vue-router", "ant-design-vue"],
       output: {
         banner,
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
-          vue: "Vue",
+          vue: "https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.esm-browser.js",
           "ant-design-vue": "antd",
         },
       },
@@ -58,7 +71,7 @@ export default defineConfig({
       fileName: "button",
       // formats: ["umd"],
       // formats: ["es"],
-      formats: ["es", "umd"],
+      formats: ["es", "umd", "amd"],
     },
   },
 });
