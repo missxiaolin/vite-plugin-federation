@@ -1,0 +1,23 @@
+{
+  "name": "remote",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --port 5000 --strictPort",
+    "serve": "vite preview --port 5000 --strictPort",
+    "build": "vite build",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "ant-design-vue": "^4.2.6",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.6",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.4.31",
+    "vite": "^4.0.5",
+    "vite-plugin-remote-module": "^1.1.4"
+  }
+}
