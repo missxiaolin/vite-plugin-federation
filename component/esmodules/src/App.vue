@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { onMounted, ref, defineAsyncComponent, markRaw } from "vue";
+import { onMounted, ref, defineAsyncComponent, markRaw, shallowRef } from "vue";
 import { Button } from "ant-design-vue";
 
 export default {
@@ -16,9 +16,9 @@ export default {
     const component = ref(null);
 
     const addComp = async (name) => {
-      console.log(name);
       try {
         const com = await import("http://localhost:5010/button.mjs");
+        console.log(com.default);
         component.value = markRaw(com.default);
       } catch (error) {
         console.error(error);
