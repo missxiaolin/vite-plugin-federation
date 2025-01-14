@@ -1,12 +1,11 @@
 <template>
   <div>
     <component :is="component"></component>
-    <a-button>啥啥啥</a-button>
   </div>
 </template>
 
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, defineAsyncComponent, markRaw } from "vue";
 import { Button } from "ant-design-vue";
 
 export default {
@@ -16,20 +15,17 @@ export default {
   setup() {
     const component = ref(null);
 
-    const loadComponent = (name) =>
-      new Promise((resolve) => {
-        const script = document.createElement("script");
-        script.src = `http://localhost:5010/button.umd.js`;
-        script.onload = script.onreadystatechange = function () {
-          resolve();
-        };
-        document.querySelector("head").appendChild(script);
-      });
-
     const addComp = async (name) => {
-      await loadComponent(name);
-      console.log(window.share);
-      component.value = window.share[name];
+      console.log(name);
+      try {
+        const com = await import("http://localhost:5010/button.mjs");
+        component.value = markRaw(com.default);
+      } catch (error) {
+        console.error(error);
+      }
+      // await loadComponent(name);
+      // console.log(window.share);
+      // component.value = window.share[name];
     };
 
     onMounted(() => {

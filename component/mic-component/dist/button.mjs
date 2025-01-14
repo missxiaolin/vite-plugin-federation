@@ -1,6 +1,6 @@
-import { openBlock as s, createElementBlock as r } from "https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.esm-browser.js";
+const { openBlock: s, createElementBlock: r } = Vue;
 /*!
-* xiaolin Tue Jan 14 2025 09:15:35 GMT+0800 (中国标准时间)
+* xiaolin Tue Jan 14 2025 09:24:36 GMT+0800 (中国标准时间)
 * (c) 2021 @Energy Monster All Right Reserved..
 */
 const p = (t, e) => {
